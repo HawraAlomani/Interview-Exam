@@ -3,7 +3,7 @@
 Create a running Python project that can take two dates as input, and then
 calculate the amount of time between them.
 """
-from datetime import datetime
+from datetime import datetime, time
 
 # Asking the user to enter two dates with the following format (dd/mm/yyyy)
 # Styling the printed message with ANSI escape code
@@ -24,7 +24,7 @@ while not date1_format:  # loop until get the valid format from user
         date1 = datetime.strptime(date1, date_format)  # save the input variable as an object with day,month,year
     except ValueError:
         date1_format = False
-        print('\033[0;31;40m The first date does not follow the format!')
+        print('\033[0;31;40m The first date does not follow the format or invalid date!')
         date1 = str(input('\033[0;35;40m Please enter again the first date:\n'))
 
 date2 = str(input('\033[0;35;40m Please enter the second date:\n'))  # user input date 2
@@ -38,7 +38,7 @@ while not date2_format:  # loop until get the valid format from user
         date2 = datetime.strptime(date2, date_format)  # save the input variable as an object with day,month,year
     except ValueError:
         date2_format = False
-        print('\033[0;31;40m The second date does not follow the format!')
+        print('\033[0;31;40m The second date does not follow the format or invalid date!')
         date2 = str(input('\033[0;35;40m Please enter again the second date:\n'))
 
 # abs() to convert the negative number to positive
