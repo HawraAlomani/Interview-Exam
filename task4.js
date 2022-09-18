@@ -1,6 +1,8 @@
+// !! Note when running the converter tool: You have to click on both selection then enter a number. -> this probably needs to be improved later.
+
 // Fixer API with my api key
 var myHeaders = new Headers();
-myHeaders.append("apikey", "uElQxR5TFwOOXx7mNnBoT8XMj3NIa45S");
+myHeaders.append("apikey", "b0NLu9qpJ1qMd2stlNqb9iFKHR4DcItf");
 
 var requestOptions = {
   method: "GET",
@@ -93,12 +95,18 @@ fetch("https://api.apilayer.com/fixer/symbols", requestOptions)
       )
         .then((response) => response.json())
         .then((result) => {
-        console.log(result)
-        // getting the result and display it in the span element with id='num2'
-
-
+          console.log(result);
+          // getting the result and display it in the span element with id='num2'
+          let keysArr = Object.values(result);
+          let convertedResult = keysArr[4];
+          console.log(convertedResult);
+          const numberElement2 = document.getElementById("num2");
+          numberElement2.textContent = convertedResult.toFixed(2); // result with 2 decimal point
+          const resultElement = document.getElementById("result");
+          resultElement.textContent = convertedResult.toFixed(2);
         })
         .catch((error) => console.log("error", error));
     }
   })
   .catch((error) => console.log("error", error));
+
