@@ -1,0 +1,71 @@
+.container{
+    padding: 10px;
+    display: inline-block;
+    width: 345px;
+    margin-top: 100px;
+    margin-left: 36%;
+    margin-right: 36%; /* make it responsive later  */
+    text-align: center;
+} 
+@media screen and (max-width: 500px){
+    .container{
+         margin-left: 12%;
+    }
+}
+
+
+#inputContainter1{
+    width:330px;
+    height:15px;
+    padding: 10px;
+    margin-bottom: 13px;
+    border: 0.5px solid grey;
+    border-radius: 3.8px;
+    display: block;
+}
+#inputContainter2{
+    width:330px;
+    height:15px;
+    padding: 10px;
+    margin-bottom: 13px;
+    border: 0.5px solid grey;
+    border-radius: 3.8px;
+    display: block;
+}
+input{
+float: left; 
+border: none;
+width: 80px;
+border-right: 0.5px solid grey;
+}
+input:focus{
+    outline: none;
+}
+select{
+  border: none;
+  float: right; 
+  color: grey;
+font-size: 13px;
+font-family: sans-serif;
+
+  
+}
+select:focus{
+    outline: none;
+}
+
+option{
+    text-align: right;
+}
+#fromResult{
+    margin-top: 7px;
+    color: grey;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+#toResult{
+    margin-top: -5px;
+    color: black;
+    font-size: 28px;
+    font-family: sans-serif;
+}
